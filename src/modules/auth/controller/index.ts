@@ -10,7 +10,7 @@ export const loginUser = async (req: Request, res: Response) => {
   try {
     const { email, password } = req.body;
     const user = await User.findOne({
-      attributes: ['id', 'firstName', 'lastName', 'email', 'phone'],
+      attributes: ['id', 'firstName', 'lastName', 'email', 'phone', 'password'],
       where: {
         email: email,
       },
